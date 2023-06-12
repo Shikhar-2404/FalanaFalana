@@ -3,14 +3,14 @@ import React, { useState } from 'react';
 function App() {
   const [message, setMessage] = useState('');
   const [response, setResponse] = useState('');
-
+debugger
   const handleMessageChange = (event) => {
     setMessage(event.target.value);
   };
 
   const handleSendMessage = async () => {
     const lowercaseMessage = message.toLowerCase();
-
+debugger
     try {
       const response = await fetch('/api/process-message', {
         method: 'POST',
