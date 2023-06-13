@@ -6,6 +6,7 @@ app = Flask(__name__)
 def process_message():
     message = request.get_json().get('message', '')
     lowercase_message = message.lower()
+    print(lowercase_message)
     
     if lowercase_message in ['aloo', 'aaloo', 'aalloo', 'potato']:
         response = 'Peela'
